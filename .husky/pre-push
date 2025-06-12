@@ -1,2 +1,2 @@
-echo -e '#!/bin/sh\n. "$(dirname "$0")/_/husky.sh"\n\nbun run typecheck && bun run prune' > .husky/pre-push
+echo -e '#!/bin/sh\n. "$(dirname "$0")/_/husky.sh"\n\nbun run typecheck && bun run build && bun run prune' > .husky/pre-push
 chmod +x .husky/pre-push
