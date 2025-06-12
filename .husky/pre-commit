@@ -1,8 +1,4 @@
-mkdir -p .husky
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-cat > .husky/pre-commit <<'EOF'
-#!/bin/sh
 bunx lint-staged
-EOF
-
-chmod +x .husky/pre-commit
