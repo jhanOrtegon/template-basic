@@ -70,7 +70,7 @@ export default tseslint.config(
 
       eqeqeq: ['error', 'always'],
       curly: ['error', 'all'],
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': ['error', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
       'no-alert': 'error',
       'no-implicit-coercion': 'error',

@@ -6,6 +6,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function AppR() {
+  console.log('xxxx')
   const [count, setCount] = useState(0)
 
   return (
