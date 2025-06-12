@@ -1,6 +1,6 @@
 # Verificar dependencias
 echo "🔍 Verificando dependencias..."
-bun install --frozen-lockfile --production=false
+bun install --frozen-lockfile
 
 # Ejecutar tests si existen
 if grep -q '"test"' package.json; then
