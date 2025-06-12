@@ -49,9 +49,9 @@
     "vite": "^6.3.5"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": [
-      "bunx prettier --write",
-      "bunx eslint --fix"
+    "*.{ts,tsx}": [
+      "bunx eslint --fix",
+      "bunx prettier --write"
     ]
   }
 }
