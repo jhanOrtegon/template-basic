@@ -7,11 +7,12 @@
     "dev": "vite",
     "prune": "ts-prune",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
     "build": "tsc -b && vite build",
     "format": "bunx prettier --write .",
-    "lint": "bunx eslint . --ext .ts,.tsx",
-    "lint:fix": "bunx eslint . --ext .ts,.tsx --fix"
+    "lint": "bunx eslint . --ext .ts,.tsx --max-warnings=0",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "prettier:fix": "bunx prettier --write",
+    "prettier:check": "bunx prettier --check"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
@@ -47,15 +48,5 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.34.0",
     "vite": "^6.3.5"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "bunx eslint --fix",
-      "bunx prettier --write",
-      "bunx tsc --noEmit"
-    ],
-    "*.{json,css,scss,md}": [
-      "bunx prettier --write"
-    ]
   }
 }

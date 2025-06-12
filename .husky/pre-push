@@ -1,0 +1,23 @@
+# Verificar dependencias
+echo "🔍 Verificando dependencias..."
+bun install --frozen-lockfile --production=false
+
+# Ejecutar tests si existen
+if grep -q '"test"' package.json; then
+  echo "🧪 Ejecutando tests..."
+  bun test
+fi
+
+# Ejecutar linting
+echo "🔧 Ejecutando linting..."
+bun run lint
+
+# Verificar tipos con TypeScript
+echo "📐 Verificando tipos..."
+bun run typecheck
+
+# Ejecutar build
+echo "🏗️ Ejecutando build..."
+bun run build
+
+echo "✅ Pre-push completado exitosamente"
