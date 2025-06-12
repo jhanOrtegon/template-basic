@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prepare": "husky",
     "prune": "ts-prune",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
