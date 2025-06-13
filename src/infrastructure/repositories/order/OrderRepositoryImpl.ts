@@ -1,8 +1,8 @@
 import { type IOrderRepository } from './OrderRepository'
 
-import { type Order } from '@/domain/entities/Order'
+import { type Order } from '@/domain/entities/Order.entity'
 import { apiClient } from '@/infrastructure/api/ApiClient'
-import { type ApiResponse } from '@/utils/ApiResponse'
+import type { ApiResponse } from '@/infrastructure/utils/ApiResponse'
 
 export class OrderRepositoryImpl implements IOrderRepository {
   async findAll(): Promise<Order[]> {
@@ -27,5 +27,10 @@ export class OrderRepositoryImpl implements IOrderRepository {
 
   async delete(id: string): Promise<void> {
     await apiClient.delete<ApiResponse<null>>(`/orders/${id}`)
+  }
+
+  async cancel(id: string): Promise<Order> {
+    const response = await apiClient.delete<ApiResponse<Order>>(`/orders/${id}`)
+    return response.data
   }
 }

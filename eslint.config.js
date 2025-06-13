@@ -65,6 +65,8 @@ export default tseslint.config(
       ...sonarjs.configs.recommended.rules,
       ...a11y.configs.recommended.rules,
 
+      '@typescript-eslint/no-explicit-any': 'error',
+
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'prettier/prettier': 'error',
 

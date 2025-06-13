@@ -2,7 +2,7 @@ import { type IUserRepository } from './UserRepository'
 
 import { type User } from '@/domain/entities/User.entity'
 import { apiClient } from '@/infrastructure/api/ApiClient'
-import { type ApiResponse } from '@/utils/ApiResponse'
+import type { ApiResponse } from '@/infrastructure/utils/ApiResponse'
 
 export class UserRepositoryImpl implements IUserRepository {
   async findAll(): Promise<User[]> {

@@ -1,4 +1,4 @@
-import { type Order } from '@/domain/entities/Order'
+import { type Order } from '@/domain/entities/Order.entity'
 
 export interface IOrderRepository {
   findAll(): Promise<Order[]>
@@ -6,4 +6,5 @@ export interface IOrderRepository {
   create(order: Order): Promise<Order>
   update(order: Order): Promise<Order>
   delete(id: string): Promise<void>
+  cancel(id: string): Promise<Order>
 }

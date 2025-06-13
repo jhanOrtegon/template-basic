@@ -1,8 +1,8 @@
 import { type IProductRepository } from './ProductRepository'
 
-import { type Product } from '@/domain/entities/Product'
+import { type Product } from '@/domain/entities/Product.entity'
 import { apiClient } from '@/infrastructure/api/ApiClient'
-import { type ApiResponse } from '@/utils/ApiResponse'
+import type { ApiResponse } from '@/infrastructure/utils/ApiResponse'
 
 export class ProductRepositoryImpl implements IProductRepository {
   async findAll(): Promise<Product[]> {
