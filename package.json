@@ -12,7 +12,8 @@
     "lint": "bunx eslint . --ext .ts,.tsx --max-warnings=0",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "prettier:fix": "bunx prettier --write",
-    "prettier:check": "bunx prettier --check"
+    "prettier:check": "bunx prettier --check",
+    "prepare": "husky"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
